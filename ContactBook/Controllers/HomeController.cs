@@ -11,13 +11,17 @@ namespace ContactBook.Controllers
         //domain name/Home/Index
         public ActionResult Index()
         {
-            return View();
+            TempData["myData"] = "I took the value from Index and sending to the about us";
+            //return View("FirstPage");
+            return RedirectToAction("About");
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
 
+            // ViewData["my-info"] = "This is my about us page....content will be added soon ..thank you!!";
+            //ViewBag.MyNewInfo = "This is my about us page....content will be added soon ..thank you!!";
+            ViewBag.MyNewInfo = TempData["myData"];
             return View();
         }
 

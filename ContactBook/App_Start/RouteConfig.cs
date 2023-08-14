@@ -13,6 +13,12 @@ namespace ContactBook
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+           // routes.MapRoute(
+           //    name: "app_one",
+           //    url: "{controller}/{action}/{id}",
+           //    defaults: new { controller = "Home", action = "About", id = UrlParameter.Optional }
+           //);
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
