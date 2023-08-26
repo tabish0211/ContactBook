@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ContactBook.Models;
 
 namespace ContactBook.Controllers
 {
@@ -13,9 +14,14 @@ namespace ContactBook.Controllers
         {
             return View();
         }
-        public ActionResult SaveUser()
+        public ActionResult SaveUser(User user)
         {
-            return View();
+            return Content("Record received successfully");
+        }
+
+        public ActionResult Cancel()
+        {
+            return View("Register");
         }
 
     }

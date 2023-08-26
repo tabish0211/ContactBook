@@ -4,50 +4,57 @@
 }
 
 <h2>Register</h2>
-<table>
-    <tr>
-        <td>User Name : &nbsp; </td>
-        <td><input type="text" name="UserName" /></td>
-    </tr>
-    <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td>Password : &nbsp; </td>
-        <td><input type="password" name="Password" /></td>
-    </tr>
-    <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td>Confirm Password : &nbsp; </td>
-        <td><input type="password" name="ConfirmPassword" /></td>
-    </tr>
 
-    <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td>Gender : &nbsp; </td>
-        <td>
-            <input type="radio" name="genderM" value="M" /><label for="genderM">M</label>
-            <input type="radio" name="genderF" value="F" /> <label for="genderF">F</label>
-        </td>
-    </tr>
+<form action="~/User/SaveUser" method="post">
+    <table>
+        <tr>
+            <td>User Name : &nbsp; </td>
+            <td><input type="text" name="UserName" /></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Password : &nbsp; </td>
+            <td><input type="password" name="Password" /></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Confirm Password : &nbsp; </td>
+            <td><input type="password" name="ConfirmPassword" /></td>
+        </tr>
+
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Gender : &nbsp; </td>
+            <td>
+                <input type="radio" name="genderM" value="M" /><label for="genderM">M</label>
+                <input type="radio" name="genderF" value="F" /> <label for="genderF">F</label>
+            </td>
+        </tr>
 
 
-    <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td> </td>
-        <td>
-            <input type="submit" value="Save" />
-            <input type="button" value="Cancel" />
-        </td>
-    </tr>
-</table>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td>
+
+                <input type="submit" value="Save" />
+
+                <form action="~/User/Cancel" method="post">
+                    <input type="submit" value="Cancel" />
+                </form>
+            </td>
+        </tr>
+    </table>
+</form>
