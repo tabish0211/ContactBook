@@ -166,6 +166,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\FirstPage.cshtml" />
     <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\User\UserDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

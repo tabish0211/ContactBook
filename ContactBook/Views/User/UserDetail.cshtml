@@ -1,0 +1,41 @@
+﻿@model ContactBook.Models.User
+
+
+@{
+    ViewBag.Title = "UserDetail";
+}
+
+<h2>UserDetail</h2>
+
+<form>
+    <table>
+        <tr>
+            <td>User Name : &nbsp; </td>
+            <td><input type="text" name="UserName" value="@Model.UserName" /></td>
+        </tr>
+
+        <tr>
+            <td>Gender : &nbsp; </td>
+            <td>
+                @{
+                    if (Model.genderM == 'M')
+                    {
+                        <input type="radio" name="genderM" value="M" checked="checked" /><label for="genderM">M</label>
+                        <input type="radio" name="genderF" value="F" /> <label for="genderF">F</label>
+                    }
+
+                    if (Model.genderF == 'F')
+                    {
+                        <input type="radio" name="genderM" value="M" /><label for="genderM">M</label>
+                        <input type="radio" name="genderF" value="F" checked="checked"/> <label for="genderF">F</label>
+                    }
+
+                }
+
+
+            </td>
+        </tr>
+
+    </table>
+</form>
+
