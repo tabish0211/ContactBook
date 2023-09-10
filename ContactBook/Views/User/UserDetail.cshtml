@@ -7,7 +7,7 @@
 
 <h2>UserDetail</h2>
 
-<form>
+<form action="~/User/EditUser" method="post">
     <table>
         <tr>
             <td>User Name : &nbsp; </td>
@@ -27,7 +27,7 @@
                     if (Model.genderF == 'F')
                     {
                         <input type="radio" name="genderM" value="M" /><label for="genderM">M</label>
-                        <input type="radio" name="genderF" value="F" checked="checked"/> <label for="genderF">F</label>
+                        <input type="radio" name="genderF" value="F" checked="checked" /> <label for="genderF">F</label>
                     }
 
                 }
@@ -36,6 +36,24 @@
             </td>
         </tr>
 
+        <tr>
+            <td>Mobile Number : &nbsp; </td>
+            <td><input type="text" name="MobileNumber" value="@Model.MobileNumber" /></td>
+        </tr>
+
+        <tr>
+            <td>Email Id : &nbsp; </td>
+            <td><input type="text" name="EmailId" value="@Model.EmailId" /></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td>
+
+                <input type="submit" value="Edit" />
+               
+            </td>
+        </tr>
+        
     </table>
 </form>
 

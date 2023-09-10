@@ -10,6 +10,8 @@ namespace ContactBook.Models
         public string UserName { get; set; }
         public string Password { get; set; }
         public string ConfirmPassword { get; set; }
+        public string MobileNumber { get; set; }
+        public string EmailId { get; set; }
         public char genderM { get; set; }
         public char genderF { get; set; }
 

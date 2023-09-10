@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search</h2>
+
+<table>
+    <thead>
+        <tr>
+
+            <th>User name  </th>
+            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+
+            <th>Gender</th>
+            <th>&nbsp;</th>
+            <th>Mobile number</th>
+            <th>&nbsp;&nbsp;&nbsp;</th>
+            <th>  Email Id</th>
+
+        </tr>
+    </thead>
+
+    @foreach (var user in ViewBag.Users as List<ContactBook.Models.User>)
+    {
+<tr>
+    <td>@user.UserName</td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    @if (user.genderF == 'F')
+    {
+        <td>F</td>
+    }
+    else
+    {
+        <td>M</td>
+    }
+
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td>@user.MobileNumber</td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td>@user.EmailId</td>
+
+</tr>
+    }
+
+
+</table>
+

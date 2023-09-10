@@ -8,7 +8,17 @@ namespace ContactBook.Controllers
 {
     public class HomeController : Controller
     {
+
+
+        public ActionResult ContactHome()
+        {
+            return View();
+        }
+
+
         //domain name/Home/Index
+
+
         public ActionResult Index()
         {
             TempData["myData"] = "I took the value from Index and sending to the about us";
